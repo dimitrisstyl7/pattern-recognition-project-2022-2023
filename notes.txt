@@ -1,0 +1,15 @@
+<> numerical_data = numerical_data.fillna(numerical_data.median()):
+        This version uses the fillna method to fill missing values in the numerical dataframe with the median of each column. This is a more efficient and recommended approach compared to looping through the data and manually replacing missing values.
+
+<> normalize_data():
+        This version normalizes the entire data dataframe (rather than just one column at a time), and it returns the transformed data directly from the fit_transform method of the scaler.
+
+<> calculate_pdf():
+        We used each data point in the column to evaluate the normal probability density function (pdf). The desired outcome is to get a single value (pdf) for each column that represents the distribution of data in that column. We have used .mean() at the end of the stats.norm.pdf function to calculate the mean of the pdf values for each column.
+
+<> plot_pdf_histograms():
+        This code will plot 10 different frequency histograms, one for each variable, using the plot_pdf_histograms function. The function takes three arguments: pdf_list which is the list of probability density functions for each variable, normalized_numerical_data which is the normalized numerical data and numerical_data_columns whis is the column names. The code calculates the histogram for each variable by using plt.hist function, and plots the corresponding pdf using plt.plot function.
+
+<> Στις αναπαραστάσεις των γραφικών παραστάσεων όσο και στα ιστογράμματα πρέπει να βάλουμε και την 10 στήλη;
+
+<> Προσπαθήστε να δημιουργήσετε δισδιάστατα γραφήματατων δεδομένων στα οποία να αναπαρίστανται με ευδιάκριτο τρόπο συνδυασμοί 2, 3 ή και 4 μεταβλητών.
