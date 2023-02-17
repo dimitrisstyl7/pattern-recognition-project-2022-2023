@@ -1,4 +1,4 @@
-# Αναγνώριση Προτύπων 2022-2023<br>Pattern Recognition 2022-203
+# Αναγνώριση Προτύπων 2022-2023<br>Pattern Recognition 2022-2023
 
 ## Dimitris Stylianou P20004 <br> Panagiota Nicolaou P20009 <br> Anastasios Baikas P20131
 
