@@ -35,19 +35,43 @@ def plot_pdf_histograms(pdf_list, normalized_numerical_data, numerical_data_colu
         plt.title(numerical_data_columns[i])
         plt.show()
 
-def _2d_scatter_plot(data, data_columns_names):
-    ''' build again the data columns names and values '''
-    data_columns_names = list(numerical_data_columns)
-    data_columns_names.append("ocean_proximity")
-    data_columns_values = list(numerical_data)
-    data_columns_values.append(categorical_data_encoded)
+def _2d_scatter_plot_with_2_attributes(data_columns_names, data_columns_values):
+    x = data_columns_values[data_columns_names[0]] # attribute 1
+    y = data_columns_values[data_columns_names[1]] # attribute 2
+    plt.scatter(x, y, c='blue')
+    plt.xlabel(x)
+    plt.ylabel(y)
+    title = 'Scatter plot of {} - {}'.format(x, y)
+    plt.title(title)
+    plt.show()
 
-    plt.scatter(data_columns_values[data_columns_names[0]], data_columns_values[data_columns_names[1]], c='blue')
-    plt.scatter(data_columns_values[data_columns_names[0]], data_columns_values[data_columns_names[2]], c='red')
-    plt.xlabel(data_columns_values[0])
-    plt.ylabel(data_columns_values[1])
-    title = 'Scatter plot of {} - {} vs {} - {}'.format(data_columns_names[0], data_columns_names[1], data_columns_names[0], data_columns_names[2])
-    plt.title()
+def _2d_scatter_plot_with_3_attributes(data_columns_names, data_columns_values):
+    x = data_columns_values[data_columns_names[0]] # attribute 1
+    y = data_columns_values[data_columns_names[1]] # attribute 2
+    color = data_columns_values[data_columns_names[2]] # attribute 3
+    color_label = data_columns_names[2]
+    cmap_value = 'viridis'
+    plt.scatter(x, y, c=color, cmap=cmap_value)
+    plt.xlabel(x)
+    plt.ylabel(y)
+    plt.colorbar(label=color_label) # plt.colorbar().set_label(color_label)
+    title = 'Scatter plot of {} - {} - {}'.format(x, y, color)
+    plt.title(title)
+    plt.show()
+    
+def _2d_scatter_plot_with_4_attributes(data_columns_names, data_columns_values):
+    x = data_columns_values[data_columns_names[0]] # attribute 1
+    y = data_columns_values[data_columns_names[1]] # attribute 2
+    color = data_columns_values[data_columns_names[2]] # attribute 3
+    size = data_columns_values[data_columns_names[3]] # attribute 4
+    color_label = data_columns_names[2]
+    cmap_value = 'viridis'
+    plt.scatter(x, y, c=color, cmap=cmap_value, size=size)
+    plt.xlabel(x)
+    plt.ylabel(y)
+    plt.colorbar(label=color_label) # plt.colorbar().set_label(color_label)
+    title = 'Scatter plot of {} - {} - {} - {}'.format(x, y, color, size)
+    plt.title(title)
     plt.show()
 
 if __name__ == '__main__':
@@ -58,4 +82,14 @@ if __name__ == '__main__':
     normalized_numerical_data = normalize_data(np.array(numerical_data))
     pdf_list = calculate_pdf(normalized_numerical_data) # calculate pdf for each column of numerical data
     pdf_list.append(calculate_pdf(categorical_data_encoded)) # calculate pdf for categorical data
-    plot_pdf_histograms(pdf_list, normalized_numerical_data, numerical_data_columns)
+    #plot_pdf_histograms(pdf_list, normalized_numerical_data, numerical_data_columns)
+    
+    ''' build again the data columns names and values '''
+    data_columns_names = list(numerical_data_columns)
+    data_columns_names.append("ocean_proximity")
+    data_columns_values = list(normalized_numerical_data)
+    data_columns_values.append(categorical_data_encoded)
+    
+    #_2d_scatter_plot_with_2_attributes(data_columns_names, data_columns_values)
+    #_2d_scatter_plot_with_3_attributes(data_columns_names, data_columns_values)
+    #_2d_scatter_plot_with_4_attributes(data_columns_names, data_columns_values)
