@@ -1,6 +1,20 @@
-# Αναγνώριση Προτύπων 2022-2023<br>Pattern Recognition 2022-2023
+# pattern_recognition_2022-2023
+<h3>Πανεπιστήμιο Πειραιώς</h3>
 
-## Dimitris Stylianou P20004 <br> Panagiota Nicolaou P20009 <br> Anastasios Baikas P20131
+<h3>Τμήμα Πληροφορικής</h3>
+
+<h3>Μάθημα:</h3>&nbsp;&nbsp;Αναγνώριση Προτύπων / Pattern Recognition
+
+<h3>Έτος:</h3>&nbsp;&nbsp;2022-2023
+
+<h3>Εξάμηνο:</h3>&nbsp;&nbsp;5ο
+
+<h3>Ομάδα Εργασίας:</h3>
+&nbsp;&nbsp;Δημήτρης Στυλιανού Π20004,<br>
+&nbsp;&nbsp;Παναγιώτα Νικολάου Π20009,<br>
+&nbsp;&nbsp;Αναστάσιος Μπάικας Π20131
+
+---
 
 ### def load_data<br>
 The load_data() function reads the data from a CSV file and returns a pandas DataFrame. The file path used in the function is an absolute path, which means that it specifies the exact location of the file on your computer. If you want to use a relative path, which is a path relative to the location of the Python script, you can change the file path to 'housing.csv' as shown in the commented line of code.
