@@ -1,4 +1,4 @@
-# pattern_recognition_2022-2023
+# pattern_recognition_project_2022-2023
 <h3>Πανεπιστήμιο Πειραιώς</h3>
 
 <h3>Τμήμα Πληροφορικής</h3>
