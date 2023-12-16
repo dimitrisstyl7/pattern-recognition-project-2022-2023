@@ -3,7 +3,7 @@
 ### Course: Pattern Recognition
 ### Semester: 5
 ### Projects Completion Year: 2023
-  ### Project Team: [Dimitris Stylianou](https://github.com/dimitrisstyl7) | [Panagiota Nicolaou](https://github.com/panagiota02) | [Anastasios Baikas](https://github.com/TasosBaikas)
+### Project Team: [Dimitris Stylianou](https://github.com/dimitrisstyl7) | [Panagiota Nicolaou](https://github.com/panagiota02) | [Anastasios Baikas](https://github.com/TasosBaikas)
 
 ---
 
